@@ -1,0 +1,18 @@
+{
+  "name": "jscraft",
+  "version": "0.0.0",
+  "description": "Tinkering with Vanilla.js Async Components",
+  "author": "jojobyte <byte@jojo.io> (https://jojo.io/)",
+  "main": "index.js",
+  "packageManager": "pnpm@8.12.1",
+  "keywords": [],
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jojobyte/jscraft.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

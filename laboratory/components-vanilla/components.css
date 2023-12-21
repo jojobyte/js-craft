@@ -1,0 +1,14 @@
+#bar,
+#lbar {
+  display: block;
+  height: 1rem;
+  width: 0;
+  background-color: hotpink;
+  transition: all ease-in-out 250ms;
+}
+
+#lbar {
+  /* width: 1rem;
+  height: 0; */
+  background-color: greenyellow;
+}

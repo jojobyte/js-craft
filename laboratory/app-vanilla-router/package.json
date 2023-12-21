@@ -1,0 +1,23 @@
+{
+  "name": "app-vanilla-router",
+  "description": "",
+  "author": "jojobyte <byte@jojo.io> (https://jojo.io/)",
+  "keywords": [
+    "js",
+    "vanilla"
+  ],
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "navigo": "^8.11.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  }
+}
