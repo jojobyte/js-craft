@@ -16,7 +16,7 @@ export function setupCounter(element) {
 
   element.addEventListener('click', listener)
 
-  setCounter(0)
+  setCounter(COUNT.value)
 
   return [COUNT.value, unsub]
 }

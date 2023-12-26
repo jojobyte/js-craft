@@ -14,13 +14,13 @@ export function findRate(rates) {
   )
 }
 
-export async function setupFiatConvert(element) {
-  let data = getRates()
-  data.then(rates => {
-    let r = findRate(rates)
-    DASH_FIAT_RATE.value = r
-  })
+let data = getRates()
+data.then(rates => {
+  let r = findRate(rates)
+  DASH_FIAT_RATE.value = r
+})
 
+export async function setupFiatConvert(element) {
   const setValue = (val, event) => {
     // if (element === event.target)
     val = val >= 0 ? val : 0
@@ -41,18 +41,18 @@ export async function setupFiatConvert(element) {
 
   element.addEventListener('input', listener)
 
+  if (
+    DASH_FIAT_RATE.value.price !== 0 &&
+    FIAT_VAL.value === 1
+  ) {
+    FIAT_VAL.value = FIAT_VAL.value * DASH_FIAT_RATE.value.price
+  }
   render(FIAT_VAL.value)
 
-  return [FIAT_VAL.value, unsub]
+  return [FIAT_VAL, unsub]
 }
 
 export async function setupDashConvert(element) {
-  let data = getRates()
-  data.then(rates => {
-    let r = findRate(rates)
-    DASH_FIAT_RATE.value = r
-  })
-
   const setValue = (val, event) => {
     // if (element === event.target)
 
@@ -76,5 +76,5 @@ export async function setupDashConvert(element) {
 
   render(DASH_VAL.value)
 
-  return [DASH_VAL.value, unsub]
+  return [DASH_VAL, unsub]
 }
