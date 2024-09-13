@@ -1,0 +1,21 @@
+{
+  "name": "app-router-vanilla",
+  "description": "",
+  "author": "jojobyte <byte@jojo.io> (https://jojo.io/)",
+  "keywords": [
+    "js",
+    "vanilla"
+  ],
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npm run https",
+    "http": "npx sirv-cli ../ -D --single 'app-router-vanilla/index.html' -p 4176",
+    "https": "npx sirv-cli ../ -D --http2 --key ~/localhost.key.pem --cert ~/localhost.pem -p 4177 --single 'app-router-vanilla/index.html'",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "theway": "^0.0.1"
+  }
+}

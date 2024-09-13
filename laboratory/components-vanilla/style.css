@@ -10,6 +10,8 @@
   background-color: #242424;
 
   --link: #bef;
+  --form-fieldset-bg: #1115;
+  --form-fieldset-btn-bg: #333;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,7 +53,7 @@ nav {
 }
 
 fieldset {
-  background-color: #1115;
+  background-color: var(--form-fieldset-bg);
   border: 0;
   outline: 0;
 }
@@ -67,6 +69,31 @@ input {
   border: 1px solid transparent;
   /* outline: 0; */
   text-align: center;
+}
+
+button {
+  line-height: 1.5;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+fieldset button {
+  padding: 0 .5em;
+  background-color: var(--form-fieldset-btn-bg);
 }
 
 #app {
@@ -97,30 +124,14 @@ input {
   color: #888;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #fff;
+
     --link: #09b;
+    --form-fieldset-bg: #ccc5;
+    --form-fieldset-btn-bg: #ddd;
   }
   button {
     background-color: #f9f9f9;

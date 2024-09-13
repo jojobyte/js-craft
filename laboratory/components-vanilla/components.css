@@ -1,4 +1,5 @@
 #bar,
+#line,
 #lbar {
   display: block;
   height: 1rem;
@@ -11,4 +12,10 @@
   /* width: 1rem;
   height: 0; */
   background-color: greenyellow;
+}
+
+#line {
+  /* width: 1rem; */
+  height: 1px;
+  background-color: turquoise;
 }

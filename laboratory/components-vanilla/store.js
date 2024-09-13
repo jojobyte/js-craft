@@ -1,6 +1,8 @@
-import { createSignal, useSignal } from './utils.js'
+import { createSignal, useSignal, hearken } from './utils.js'
 
 export let COUNT = createSignal(0)
+
+// export let COUNTEN = hearken(0, 'counten')
 // export let USE_COUNT = useSignal(0)
 
 export let DASH_FIAT_RATE = createSignal({ price: 0 })
